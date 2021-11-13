@@ -8,7 +8,7 @@ public class Controladora {
     
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
     
-    public void altaMascota(Mascota pet){
+    public void crearMascota(Mascota pet){
         controlPersis.crearMascota(pet);
     }
     
