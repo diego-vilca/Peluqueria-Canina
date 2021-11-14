@@ -1,12 +1,18 @@
 package igu;
 
+import javax.swing.JOptionPane;
+import logica.Controladora;
+
 
 public class Principal extends javax.swing.JFrame {
-
+    Controladora control;
    
-    public Principal() {
+    public Principal(Controladora control) {
         initComponents();
+        this.control = control;
     }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -271,6 +277,60 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        limpiarForm();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+        //Faltan las validaciones
+        
+        String num_cliente = txtCliente.getText();
+        String nombre_perro = txtNombre.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String nombre_duenio = txtDuenio.getText();
+        String celular_duenio = txtCel.getText();
+        String observacion = txaObs.getText();
+        
+        //============================================
+        //combo atencion especial
+        boolean atencion_especial = false;
+        
+        String result_cmb_esp = cmbEspecial.getSelectedItem().toString();
+        
+        if (result_cmb_esp == "Si") {
+            atencion_especial = true;
+        }else{
+            atencion_especial = false;
+        }
+        
+        //combo alergias
+        boolean alergico = false;
+        
+        String result_cmb_alerg = cmbAlergia.getSelectedItem().toString();
+        
+        if (result_cmb_alerg == "Si") {
+            alergico = true;
+        }else{
+            alergico = false;
+        }
+        
+       
+        //============================================
+        
+        try {
+            control.crearMascota(num_cliente, nombre_perro, raza, color, alergico, atencion_especial, nombre_duenio, celular_duenio, observacion);
+            JOptionPane.showMessageDialog(null, "Mascota agregada correctamente", "Mascota agregada", JOptionPane.INFORMATION_MESSAGE);
+            limpiarForm();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ah ocurrido un error, la mascota no se ha agregado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+                       
+        
+    }//GEN-LAST:event_btnGuardarActionPerformed
+    
+    
+    private void limpiarForm(){
         txtCliente.setText("");
         txtNombre.setText("");
         txtRaza.setText("");
@@ -280,13 +340,9 @@ public class Principal extends javax.swing.JFrame {
         txtDuenio.setText("");
         txtCel.setText("");
         txaObs.setText("");
-    }//GEN-LAST:event_btnLimpiarActionPerformed
-
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardarActionPerformed
-
- 
+    }
+    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;

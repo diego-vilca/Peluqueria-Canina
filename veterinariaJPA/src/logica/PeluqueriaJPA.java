@@ -11,7 +11,7 @@ public class PeluqueriaJPA {
         
         Controladora control = new Controladora();
         
-        Principal princ = new Principal();
+        Principal princ = new Principal(control);
         princ.setVisible(true);
         princ.setLocationRelativeTo(null);
         
