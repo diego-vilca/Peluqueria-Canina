@@ -1,0 +1,3 @@
+base de datos: veterinaria
+usuario: admin_vet
+contraseña: 12345
