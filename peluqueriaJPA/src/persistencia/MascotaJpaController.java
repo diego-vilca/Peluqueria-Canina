@@ -21,6 +21,8 @@ public class MascotaJpaController implements Serializable {
     }
     private EntityManagerFactory emf = null;
 
+    /* agrego el constructor para mi unidad de persistencia y conección con mi controladora de JPA
+    */
     public MascotaJpaController() {
         emf = Persistence.createEntityManagerFactory("veterinariaJPA_PU");
     }

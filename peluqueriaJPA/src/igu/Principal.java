@@ -1,15 +1,27 @@
 package igu;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import logica.Controladora;
 
 
 public class Principal extends javax.swing.JFrame {
+    
+        
+    ImagenFondo fondo = new ImagenFondo();
+    // variable que me servira para retornar los valores de los campos, dentro del método btnGuardarActionPerformed.
     Controladora control;
    
     public Principal(Controladora control) {
+        // cargo el fondo antes de inicializar los componentes porque sino los tapa
+        this.setContentPane(fondo);
         initComponents();
+        // asigno la variable control proveniente de PeluqueriaJPA a mi variable global control.
         this.control = control;
+        
     }
     
     
@@ -57,8 +69,8 @@ public class Principal extends javax.swing.JFrame {
         pnlTitulo.setMaximumSize(new java.awt.Dimension(561, 148));
         pnlTitulo.setOpaque(false);
 
-        lblTitulo.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(51, 102, 255));
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 51, 153));
         lblTitulo.setText("Pelúqueria Canina");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_ur.png"))); // NOI18N
@@ -92,41 +104,63 @@ public class Principal extends javax.swing.JFrame {
         pnlInputs.setMaximumSize(new java.awt.Dimension(464, 528));
         pnlInputs.setOpaque(false);
 
-        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblNombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(0, 51, 153));
         lblNombre.setText("Nombre:");
 
-        lblCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblCliente.setForeground(new java.awt.Color(0, 51, 153));
         lblCliente.setText("Cliente N°:");
 
-        lblAlergia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAlergia.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblAlergia.setForeground(new java.awt.Color(0, 51, 153));
         lblAlergia.setText("Alérgico:");
 
-        lblRaza.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblRaza.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblRaza.setForeground(new java.awt.Color(0, 51, 153));
         lblRaza.setText("Raza:");
 
-        lblColor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblColor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblColor.setForeground(new java.awt.Color(0, 51, 153));
         lblColor.setText("Color:");
 
-        lblEspecial.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblEspecial.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblEspecial.setForeground(new java.awt.Color(0, 51, 153));
         lblEspecial.setText("Atención Especial:");
 
-        lblDuenio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDuenio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblDuenio.setForeground(new java.awt.Color(0, 51, 153));
         lblDuenio.setText("Nombre Dueño:");
 
-        lblObs.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblObs.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblObs.setForeground(new java.awt.Color(0, 51, 153));
         lblObs.setText("Observaciones:");
 
-        lblCel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblCel.setForeground(new java.awt.Color(0, 51, 153));
         lblCel.setText("Cel. Dueño:");
 
-        cmbAlergia.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        txtCliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        txtRaza.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        txtColor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        cmbAlergia.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cmbAlergia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
+        txtDuenio.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        txtCel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
         txaObs.setColumns(20);
+        txaObs.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txaObs.setRows(5);
         jScrollPane1.setViewportView(txaObs);
 
-        cmbEspecial.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        cmbEspecial.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cmbEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
         javax.swing.GroupLayout pnlInputsLayout = new javax.swing.GroupLayout(pnlInputs);
@@ -241,7 +275,8 @@ public class Principal extends javax.swing.JFrame {
         pnlBotones.setMaximumSize(new java.awt.Dimension(733, 111));
         pnlBotones.setOpaque(false);
 
-        btnLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(0, 51, 153));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +285,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnGuardar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(0, 51, 153));
         btnGuardar.setText("Guardar");
         btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.setPreferredSize(new java.awt.Dimension(76, 35));
@@ -321,12 +357,15 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        /*función que limpia los campos del formulario.
+        */
         limpiarForm();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        
-        //Faltan las validaciones
+        /* función que envia los valores ingresados hacia mi controladora, por medio de mi variable control, para crear una mascota.
+        */
+        //Faltan todas las validaciones
         
         String num_cliente = txtCliente.getText();
         String nombre_perro = txtNombre.getText();
@@ -336,7 +375,6 @@ public class Principal extends javax.swing.JFrame {
         String celular_duenio = txtCel.getText();
         String observacion = txaObs.getText();
         
-        //============================================
         //combo atencion especial
         boolean atencion_especial = false;
         
@@ -363,9 +401,15 @@ public class Principal extends javax.swing.JFrame {
         //============================================
         
         try {
+            // intento guardar los valores ingresados
             control.crearMascota(num_cliente, nombre_perro, raza, color, alergico, atencion_especial, nombre_duenio, celular_duenio, observacion);
+            
+            // muestro un mensaje de guardado exitoso
             JOptionPane.showMessageDialog(null, "Mascota agregada correctamente", "Mascota agregada", JOptionPane.INFORMATION_MESSAGE);
+            
+            // limpio los campos
             limpiarForm();
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Ah ocurrido un error, la mascota no se ha agregado", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -375,6 +419,8 @@ public class Principal extends javax.swing.JFrame {
     
     
     private void limpiarForm(){
+        /* función que limpia los campos de la interfaz
+        */
         txtCliente.setText("");
         txtNombre.setText("");
         txtRaza.setText("");
@@ -386,6 +432,19 @@ public class Principal extends javax.swing.JFrame {
         txaObs.setText("");
     }
     
+     class ImagenFondo extends JPanel{
+        /* clase que setea y gestiona el background del jFrame
+        */
+        private Image imagen;
+        
+        public void paint(Graphics g){
+            imagen = new ImageIcon(getClass().getResource("../imagenes/bg.png")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
+    }
+   
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

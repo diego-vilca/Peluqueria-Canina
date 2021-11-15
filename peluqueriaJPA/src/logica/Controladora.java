@@ -5,8 +5,10 @@ import java.util.List;
 import persistencia.ControladoraPersistencia;
 
 public class Controladora {
-    
+    // llamo a la controladora de la persistencia (se crean las tablas en mi base de datos)
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+    
+    // métodos y sobrecargas
     
     public void crearMascota(String num_cliente, String nombre_perro, String raza, String color, boolean alergico, boolean atencion_especial, String nombre_duenio, String celular_duenio, String observaciones){
         Mascota pet = new Mascota();

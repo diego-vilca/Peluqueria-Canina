@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Mascota implements Serializable {
-    
+    //atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -25,6 +25,7 @@ public class Mascota implements Serializable {
     private String celular_duenio;
     private String observaciones;
 
+    // constructores
     public Mascota() {
     }
 
@@ -41,6 +42,8 @@ public class Mascota implements Serializable {
         this.observaciones = observaciones;
     }
 
+    // getters and setters
+    
     public int getId() {
         return id;
     }

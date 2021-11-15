@@ -8,7 +8,7 @@ import logica.Mascota;
 import persistencia.exceptions.NonexistentEntityException;
 
 public class ControladoraPersistencia {
-    
+    // creo una mascota dentro de mi unidad de persistencia
     MascotaJpaController mascotaJPA = new MascotaJpaController();
     
     //método para alta
