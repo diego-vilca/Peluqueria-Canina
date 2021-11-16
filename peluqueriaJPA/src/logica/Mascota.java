@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Mascota implements Serializable {
     //atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Basic
     private String num_cliente;
