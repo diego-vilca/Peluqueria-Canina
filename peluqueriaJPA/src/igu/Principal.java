@@ -32,8 +32,8 @@ public class Principal extends javax.swing.JFrame {
 
         pnlTitulo = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblImgHuellaUR = new javax.swing.JLabel();
+        lblImgHuellaUL = new javax.swing.JLabel();
         pnlInputs = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         lblCliente = new javax.swing.JLabel();
@@ -55,12 +55,12 @@ public class Principal extends javax.swing.JFrame {
         txaObs = new javax.swing.JTextArea();
         cmbEspecial = new javax.swing.JComboBox<>();
         pnlImg = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblImgCentral = new javax.swing.JLabel();
         pnlBotones = new javax.swing.JPanel();
         btnLimpiar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblImgHuellaDL = new javax.swing.JLabel();
+        lblImgHuellaDR = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(643, 661));
@@ -73,20 +73,20 @@ public class Principal extends javax.swing.JFrame {
         lblTitulo.setForeground(new java.awt.Color(0, 51, 153));
         lblTitulo.setText("Pelúqueria Canina");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_ur.png"))); // NOI18N
+        lblImgHuellaUR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_ur.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_ul.png"))); // NOI18N
+        lblImgHuellaUL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_ul.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlTituloLayout = new javax.swing.GroupLayout(pnlTitulo);
         pnlTitulo.setLayout(pnlTituloLayout);
         pnlTituloLayout.setHorizontalGroup(
             pnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTituloLayout.createSequentialGroup()
-                .addComponent(jLabel3)
+                .addComponent(lblImgHuellaUL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitulo)
                 .addGap(132, 132, 132)
-                .addComponent(jLabel2))
+                .addComponent(lblImgHuellaUR))
         );
         pnlTituloLayout.setVerticalGroup(
             pnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,8 +96,8 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
             .addGroup(pnlTituloLayout.createSequentialGroup()
                 .addGroup(pnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(lblImgHuellaUR)
+                    .addComponent(lblImgHuellaUL))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -250,10 +250,9 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlImg.setMinimumSize(null);
         pnlImg.setOpaque(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pichicho.png"))); // NOI18N
+        lblImgCentral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pichicho.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlImgLayout = new javax.swing.GroupLayout(pnlImg);
         pnlImg.setLayout(pnlImgLayout);
@@ -261,14 +260,14 @@ public class Principal extends javax.swing.JFrame {
             pnlImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlImgLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lblImgCentral)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlImgLayout.setVerticalGroup(
             pnlImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlImgLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(jLabel1)
+                .addComponent(lblImgCentral)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -296,22 +295,22 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_dl.png"))); // NOI18N
+        lblImgHuellaDL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_dl.png"))); // NOI18N
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_dr.png"))); // NOI18N
+        lblImgHuellaDR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/huella_dr.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlBotonesLayout = new javax.swing.GroupLayout(pnlBotones);
         pnlBotones.setLayout(pnlBotonesLayout);
         pnlBotonesLayout.setHorizontalGroup(
             pnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBotonesLayout.createSequentialGroup()
-                .addComponent(jLabel4)
+                .addComponent(lblImgHuellaDL)
                 .addGap(113, 113, 113)
                 .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
                 .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
+                .addComponent(lblImgHuellaDR)
                 .addContainerGap())
         );
         pnlBotonesLayout.setVerticalGroup(
@@ -325,8 +324,8 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBotonesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(pnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(lblImgHuellaDL, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblImgHuellaDR, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -380,7 +379,7 @@ public class Principal extends javax.swing.JFrame {
         
         String result_cmb_esp = cmbEspecial.getSelectedItem().toString();
         
-        if (result_cmb_esp == "Si") {
+        if (result_cmb_esp.equals("Si")) {
             atencion_especial = true;
         }else{
             atencion_especial = false;
@@ -391,7 +390,7 @@ public class Principal extends javax.swing.JFrame {
         
         String result_cmb_alerg = cmbAlergia.getSelectedItem().toString();
         
-        if (result_cmb_alerg == "Si") {
+        if (result_cmb_alerg.equals("Si")) {
             alergico = true;
         }else{
             alergico = false;
@@ -452,11 +451,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbAlergia;
     private javax.swing.JComboBox<String> cmbEspecial;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAlergia;
     private javax.swing.JLabel lblCel;
@@ -464,6 +458,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel lblColor;
     private javax.swing.JLabel lblDuenio;
     private javax.swing.JLabel lblEspecial;
+    private javax.swing.JLabel lblImgCentral;
+    private javax.swing.JLabel lblImgHuellaDL;
+    private javax.swing.JLabel lblImgHuellaDR;
+    private javax.swing.JLabel lblImgHuellaUL;
+    private javax.swing.JLabel lblImgHuellaUR;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblObs;
     private javax.swing.JLabel lblRaza;
